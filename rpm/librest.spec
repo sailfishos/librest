@@ -1,16 +1,17 @@
 Name:          librest
-Version:       0.7.10
+Version:       0.7.12
 Release:       1
 Summary:       A library for access to RESTful web services
 Group:         Development/Libraries
 License:       LGPLv2
 URL:           http://www.gnome.org
-Source0:       ftp://ftp.gnome.org/pub/gnome/sources/%{name}/0.7/%{name}-%{version}.tar.bz2
+Source0:       %{name}-%{version}.tar.bz2
 
 BuildRequires: pkgconfig(glib-2.0)
 BuildRequires: pkgconfig(libsoup-2.4)
 BuildRequires: pkgconfig(libxml-2.0)
 BuildRequires: ca-certificates
+Obsoletes:     rest <= 0.7.12
 
 %description
 This library was designed to make it easier to access web services that
@@ -25,6 +26,7 @@ this library is attempting to support.
 Summary: Development package for %{name}
 Group: Development/Libraries
 Requires: %{name} = %{version}-%{release}
+Obsoletes: rest-devel <= 0.7.12
 
 %description devel
 Files for development with %{name}.
